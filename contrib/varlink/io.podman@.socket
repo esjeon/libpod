@@ -1,0 +1,10 @@
+[Unit]
+Description=Podman Remote API Socket for user %i
+Documentation=man:podman-varlink(1)
+
+[Socket]
+ListenStream=%t/podman/io.podman-%i
+SocketMode=0600
+
+[Install]
+WantedBy=sockets.target
